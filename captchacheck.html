@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <h2>Регистрация нового пользователя</h2>
+    <form method="post" action="process_registration.php">
+        <label for="username">Имя пользователя:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div><br><br>
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+</body>
+</html>
