@@ -1,0 +1,126 @@
+[33mcommit 8d4858387f56659f3558c3cf724d367cc91c8bfb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Merge: 008386b 46e57ca
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Mar 10 16:00:08 2024 +0300
+
+    Merge branch 'registration_module'
+
+[33mcommit 46e57ca5ab5f2fb62e8f89e9aebc5db1580372ed[m[33m ([m[1;32mregistration_module[m[33m)[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Mar 10 15:39:55 2024 +0300
+
+    Добавлены пользовательские соглашения и политика конфиденциальности
+
+[33mcommit d8ac149c5a35b584d60c028af5aaeb36066e4c7e[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Mar 10 15:38:51 2024 +0300
+
+    Реализовано подтверждение электронной почты после регистрации
+
+[33mcommit 58c466b8fbe5635bf8df1a8c63a9f299d2698348[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Mar 10 15:38:04 2024 +0300
+
+    Добавлена капча для предотвращения автоматической регистрации
+
+[33mcommit cb827264d8cee18b733f5463ebe0dca48dfe9616[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Mar 10 15:36:44 2024 +0300
+
+    Реализована проверка уникальности электронной почты
+
+[33mcommit eb18af749b02b1bdfa69cb3afb3085e232d19a30[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Mar 10 15:36:07 2024 +0300
+
+    Создан интерфейс регистрации новых пользователей
+
+[33mcommit 008386b37a21625e19e7bbc50d90b05cef0e8d06[m[33m ([m[1;32mauth_module[m[33m)[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Mar 10 15:15:09 2024 +0300
+
+    Оптимизированы запросы к базе данных для ускорения аутентификации
+
+[33mcommit 375ff551219a31e47f893e6b5b3ec6d5bd2ed182[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Mar 10 15:14:36 2024 +0300
+
+    Добавлена функция восстановления пароля
+
+[33mcommit 0b43c65f7d7caf82cfc84730eeff98f44a95f224[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Mar 10 15:14:03 2024 +0300
+
+    Добавлена поддержка OAuth для аутентификации через сторонние сервисы
+
+[33mcommit fbcd15f8db0a869396b0501f9e1295bea88e39b9[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Mar 10 15:13:36 2024 +0300
+
+    Реализована функция входа в систему
+
+[33mcommit 1fede090a016154b958c0985ce96ffe21bd0462e[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Mar 10 14:55:32 2024 +0300
+
+    Добавлена базовая структура модуля авторизации
+
+[33mcommit 2329bb92e9590208f487f10b03deab1a7eb765ab[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/auth_module[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32muser_profile_module[m[33m, [m[1;32muser_groups_module[m[33m, [m[1;32mreminders_module[m[33m, [m[1;32mnotifications_module[m[33m, [m[1;32mfile_attachment_module[m[33m, [m[1;32mevent_templates_module[m[33m, [m[1;32mevent_search_module[m[33m, [m[1;32mevent_import_export_module[m[33m, [m[1;32mevent_filtering_module[m[33m, [m[1;32mevent_editing_module[m[33m, [m[1;32mevent_deletion_module[m[33m, [m[1;32mevent_creation_module[m[33m, [m[1;32mevent_comments_module[m[33m, [m[1;32mevent_categorization_module[m[33m, [m[1;32mevent_analytics_module[m[33m, [m[1;32mcalendar_subscriptions_module[m[33m, [m[1;32mcalendar_sharing_module[m[33m, [m[1;32mcalendar_module[m[33m, [m[1;32mcalendar_color_scheme_module[m[33m, [m[1;32maccess_rights_module[m[33m)[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Thu Feb 22 10:21:23 2024 +0300
+
+    Внесение изменений
+
+[33mcommit 28ada512614f7715e7bdc7b2731ec200aaed4d57[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Wed Feb 21 13:11:42 2024 +0300
+
+    Внесение корректировок
+
+[33mcommit bc7eab0dc154f45bc94648529b395184dbf6086c[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Wed Feb 21 12:54:41 2024 +0300
+
+    Внесение изменений
+
+[33mcommit 9670053f039897af7b9d3cbc91ce2f6b2a02f246[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Mon Feb 19 10:46:43 2024 +0300
+
+    Внесение изменений
+
+[33mcommit 798e1bda2f3920a24632e807b20d3b238a2c354b[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Mon Feb 19 10:44:19 2024 +0300
+
+    Внесение изменений
+
+[33mcommit f85b5204f7781e36bb10743cf429716569f6c94e[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Feb 18 21:08:54 2024 +0300
+
+    Заполнение файлов
+
+[33mcommit ebb4eb4d1f7717f63c46bc02d0a661220242b795[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Feb 18 20:24:22 2024 +0300
+
+    Заполнение файлов
+
+[33mcommit ea37e6a2759a5f80c9c17ce83365982e3361cec7[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Feb 18 14:28:21 2024 +0300
+
+    Переименовывание
+
+[33mcommit a0f4b9a927598665f18f389b181ab0e1b8ebf778[m
+Author: Yastrebov Alexander <yastrebov_sasha98@mail.ru>
+Date:   Sun Feb 18 14:25:29 2024 +0300
+
+    Создание папок
+
+[33mcommit fa2f4f1a68bc47f35afe319247b0eed804dad1d6[m
+Author: Jojo-Reference <58255362+Jojo-Reference@users.noreply.github.com>
+Date:   Sun Feb 18 13:51:23 2024 +0300
+
+    Initial commit
