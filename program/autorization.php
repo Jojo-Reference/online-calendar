@@ -29,12 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     {
         padding: 0;
-
-    <<<<<<< HEAD
         background: #99c8f7;
-=======
-        background: #98fb93;
->>>>>>> new_branch_to_merge_later
     }
     <h2>Авторизация</h2>
     <?php if (isset($error_message)) { ?>
