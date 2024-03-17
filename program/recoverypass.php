@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-// Подключение к базе данных (замените данными вашей БД)
 $servername = "localhost";
 $username = "username";
 $password = "password";
@@ -38,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>

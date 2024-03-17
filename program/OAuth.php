@@ -1,6 +1,4 @@
 <?php
-require 'vendor/autoload.php'; // Подключаем библиотеку OAuth 2.0
-
 session_start();
 
 // Настройки OAuth для Google

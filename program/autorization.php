@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // Проверяем, была ли отправлена форма
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = "admin";
