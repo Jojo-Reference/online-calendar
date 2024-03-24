@@ -1,6 +1,22 @@
 <?php
+/**
+ * Скрипт авторизации пользователя.
+ *
+ * Этот скрипт обрабатывает введенные пользователем данные для входа в систему.
+ * При успешной авторизации пользователь перенаправляется на страницу календаря.
+ * При неудачной попытке авторизации выводится сообщение об ошибке.
+ */
+
+// Инициализация сессии
 session_start();
 
+/**
+ * Функция для проверки учетных данных пользователя.
+ *
+ * @param string $username Имя пользователя
+ * @param string $password Пароль пользователя
+ * @return bool Результат проверки учетных данных (true - успешно, false - неуспешно)
+ */
 function login($username, $password) {
     $valid_username = "admin";
     $valid_password = "password";
@@ -18,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $input_username = $_POST["username"];
     $input_password = $_POST["password"];
 
+    // Вызов функции login для проверки учетных данных
     if (login($input_username, $input_password)) {
         header("Location: calendar.php");
         exit();
@@ -30,13 +47,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Заголовок страницы авторизации -->
     <title>Авторизация</title>
 </head>
 <body>
+    <!-- Заголовок формы авторизации -->
     <h2>Авторизация</h2>
+
+    <!-- Вывод сообщения об ошибке, если оно установлено -->
     <?php if (isset($error_message)) { ?>
         <p style="color: red;"><?php echo $error_message; ?></p>
     <?php } ?>
+
+    <!-- Форма авторизации -->
     <form method="post" action="">
         <label for="username">Имя пользователя:</label><br>
         <input type="text" id="username" name="username"><br><br>

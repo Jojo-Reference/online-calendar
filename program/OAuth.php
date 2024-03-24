@@ -1,4 +1,12 @@
 <?php
+/**
+ * Скрипт для аутентификации через OAuth 2.0 с использованием Google.
+ *
+ * Этот скрипт позволяет пользователю авторизоваться через OAuth 2.0 с помощью учетных данных Google.
+ * После успешной аутентификации выводится информация о пользователе.
+ */
+
+// Инициализация сессии
 session_start();
 
 // Настройки OAuth для Google
@@ -6,14 +14,14 @@ $clientID = 'YOUR_GOOGLE_CLIENT_ID';
 $clientSecret = 'YOUR_GOOGLE_CLIENT_SECRET';
 $redirectUri = 'http://yourdomain.com/oauth_callback.php';
 
-// Создаем объект OAuth 2.0
+// Создание объекта OAuth 2.0 для Google
 $provider = new League\OAuth2\Client\Provider\Google([
     'clientId'     => $clientID,
     'clientSecret' => $clientSecret,
     'redirectUri'  => $redirectUri,
 ]);
 
-// Если пользователь не авторизован, перенаправляем на страницу аутентификации Google
+// Проверка авторизации пользователя и перенаправление на страницу аутентификации Google при необходимости
 if (!isset($_SESSION['access_token'])) {
     if (!isset($_GET['code'])) {
         $authUrl = $provider->getAuthorizationUrl();
@@ -31,8 +39,8 @@ if (!isset($_SESSION['access_token'])) {
     }
 }
 
-// Получаем данные пользователя
+// Получение данных пользователя
 $user = $provider->getResourceOwner($_SESSION['access_token']);
 
-// Выводим информацию о пользователе
+// Вывод информации о пользователе
 echo 'Привет, ' . $user->getName();

@@ -1,4 +1,12 @@
 <?php
+/**
+ * Скрипт для регистрации нового пользователя.
+ *
+ * Этот скрипт обрабатывает запросы на регистрацию нового пользователя.
+ * Пользователь вводит имя пользователя, email и пароль, после чего происходит проверка и сохранение данных в базу данных.
+ */
+
+// Инициализация сессии
 session_start();
 
 // Подключение к базе данных (замените данными вашей БД)
@@ -6,7 +14,6 @@ $servername = "localhost";
 $username = "username";
 $password = "password";
 $dbname = "calendar_db";
-
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
@@ -42,16 +49,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Заголовок страницы регистрации -->
     <title>Регистрация</title>
 </head>
 <body>
+    <!-- Заголовок формы регистрации нового пользователя -->
     <h2>Регистрация нового пользователя</h2>
+
+    <!-- Вывод сообщения об ошибке, если оно установлено -->
     <?php if (isset($error_message)) { ?>
         <p style="color: red;"><?php echo $error_message; ?></p>
     <?php } ?>
+
+    <!-- Вывод сообщения об успешной регистрации пользователя -->
     <?php if (isset($success_message)) { ?>
         <p style="color: green;"><?php echo $success_message; ?></p>
     <?php } ?>
+
+    <!-- Форма для ввода данных нового пользователя и отправки запроса на регистрацию -->
     <form method="post" action="">
         <label for="username">Имя пользователя:</label><br>
         <input type="text" id="username" name="username"><br><br>
