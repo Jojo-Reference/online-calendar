@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_o_auth_8php" kind="file" language="PHP">
+    <compoundname>OAuth.php</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_o_auth_8php_1aec4c923c7b3e3dfc9b2eac653af820ed" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$clientID</definition>
+        <argsstring></argsstring>
+        <name>$clientID</name>
+        <initializer>= &apos;YOUR_GOOGLE_CLIENT_ID&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OAuth.php" line="13" column="1" bodyfile="OAuth.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_o_auth_8php_1a3523acfb1ec2691723f13dd4ccd114c9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$clientSecret</definition>
+        <argsstring></argsstring>
+        <name>$clientSecret</name>
+        <initializer>= &apos;YOUR_GOOGLE_CLIENT_SECRET&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OAuth.php" line="14" column="1" bodyfile="OAuth.php" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_o_auth_8php_1ae3a1cc92dd18e810d97a9f1286ee3e68" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$redirectUri</definition>
+        <argsstring></argsstring>
+        <name>$redirectUri</name>
+        <initializer>= &apos;http://yourdomain.com/oauth_callback.php&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OAuth.php" line="15" column="1" bodyfile="OAuth.php" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_o_auth_8php_1a934c4a71069a9e3bf15bcb8206884031" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$provider</definition>
+        <argsstring></argsstring>
+        <name>$provider</name>
+        <initializer>= new League\OAuth2\Client\Provider\Google([
+    &apos;clientId&apos;     =&gt; $clientID,
+    &apos;clientSecret&apos; =&gt; $clientSecret,
+    &apos;redirectUri&apos;  =&gt; $redirectUri,
+])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OAuth.php" line="18" column="1" bodyfile="OAuth.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_o_auth_8php_1a8669ddd1c93cc285e315735bfbb78b54" prot="public" static="no" mutable="no">
+        <type>if(!isset($_SESSION[&apos;access_token&apos;]))</type>
+        <definition>if (!isset( $_SESSION[ &apos;access_token&apos;])) $user</definition>
+        <argsstring></argsstring>
+        <name>$user</name>
+        <initializer>= $provider-&gt;getResourceOwner($_SESSION[&apos;access_token&apos;])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OAuth.php" line="43" column="1" bodyfile="OAuth.php" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Инициализация<sp/>сессии</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">session_start();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Настройки<sp/>OAuth<sp/>для<sp/>Google</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">$clientID<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;YOUR_GOOGLE_CLIENT_ID&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">$clientSecret<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;YOUR_GOOGLE_CLIENT_SECRET&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">$redirectUri<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;http://yourdomain.com/oauth_callback.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Создание<sp/>объекта<sp/>OAuth<sp/>2.0<sp/>для<sp/>Google</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">$provider<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>League\OAuth2\Client\Provider\Google([</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;clientId&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$clientID,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;clientSecret&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$clientSecret,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;redirectUri&apos;</highlight><highlight class="normal"><sp/><sp/>=&gt;<sp/>$redirectUri,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Проверка<sp/>авторизации<sp/>пользователя<sp/>и<sp/>перенаправление<sp/>на<sp/>страницу<sp/>аутентификации<sp/>Google<sp/>при<sp/>необходимости</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset($_SESSION[</highlight><highlight class="stringliteral">&apos;access_token&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset($_GET[</highlight><highlight class="stringliteral">&apos;code&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$authUrl<sp/>=<sp/>$provider-&gt;getAuthorizationUrl();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;oauth2state&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$provider-&gt;getState();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&apos;Location:<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$authUrl);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>elseif<sp/>(empty($_GET[</highlight><highlight class="stringliteral">&apos;state&apos;</highlight><highlight class="normal">])<sp/>||<sp/>($_GET[</highlight><highlight class="stringliteral">&apos;state&apos;</highlight><highlight class="normal">]<sp/>!==<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;oauth2state&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unset($_SESSION[</highlight><highlight class="stringliteral">&apos;oauth2state&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(</highlight><highlight class="stringliteral">&apos;Invalid<sp/>state&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$token<sp/>=<sp/>$provider-&gt;getAccessToken(</highlight><highlight class="stringliteral">&apos;authorization_code&apos;</highlight><highlight class="normal">,<sp/>[</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;code&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;code&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>]);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;access_token&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$token-&gt;getToken();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Получение<sp/>данных<sp/>пользователя</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">$user<sp/>=<sp/>$provider-&gt;getResourceOwner($_SESSION[</highlight><highlight class="stringliteral">&apos;access_token&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Вывод<sp/>информации<sp/>о<sp/>пользователе</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">echo<sp/></highlight><highlight class="stringliteral">&apos;Привет,<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$user-&gt;getName();</highlight></codeline>
+    </programlisting>
+    <location file="OAuth.php"/>
+  </compounddef>
+</doxygen>

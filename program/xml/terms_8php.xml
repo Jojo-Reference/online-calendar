@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="terms_8php" kind="file" language="PHP">
+    <compoundname>terms.php</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;!DOCTYPE<sp/>html&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">&lt;html&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">&lt;head&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;title&gt;Пользовательское<sp/>соглашение&lt;/title&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">&lt;/head&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">&lt;body&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;h2&gt;Пользовательское<sp/>соглашение&lt;/h2&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;p&gt;Текст<sp/>пользовательского<sp/>соглашения<sp/>здесь.&lt;/p&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">&lt;/body&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">&lt;/html&gt;</highlight></codeline>
+    </programlisting>
+    <location file="terms.php"/>
+  </compounddef>
+</doxygen>

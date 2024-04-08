@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.10.0" xml:lang="en-US">
+  <compound refid="autorization_8php" kind="file"><name>autorization.php</name>
+  </compound>
+  <compound refid="confirm__email_8php" kind="file"><name>confirm_email.php</name>
+    <member refid="confirm__email_8php_1a196167a3508ed49b5a31b8c000223327" kind="variable"><name>else</name></member>
+  </compound>
+  <compound refid="emailcheck_8php" kind="file"><name>emailcheck.php</name>
+    <member refid="emailcheck_8php_1ad79b54e31bd1050001133c4d70f850fe" kind="variable"><name>$servername</name></member>
+    <member refid="emailcheck_8php_1a0eb82aa5f81cf845de4b36cd653c42cf" kind="variable"><name>$username</name></member>
+    <member refid="emailcheck_8php_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="emailcheck_8php_1ac5111a571fffa2499732833bb7f0d8c1" kind="variable"><name>$dbname</name></member>
+    <member refid="emailcheck_8php_1aa8a5a87b9c1a6a0819b88447cbe41877" kind="variable"><name>$conn</name></member>
+    <member refid="emailcheck_8php_1ad634f418b20382e2802f80532d76d3cd" kind="variable"><name>$email</name></member>
+    <member refid="emailcheck_8php_1af8c3245423806c39aca88b23c0b44c90" kind="variable"><name>else</name></member>
+    <member refid="emailcheck_8php_1ab0c29962f39a82f96c7de98c3c677400" kind="function"><name>isEmailUnique</name></member>
+  </compound>
+  <compound refid="login_func_8php" kind="file"><name>loginFunc.php</name>
+    <member refid="login_func_8php_1ad870c94a5775868891f6c50b9818d627" kind="function"><name>login</name></member>
+  </compound>
+  <compound refid="_o_auth_8php" kind="file"><name>OAuth.php</name>
+    <member refid="_o_auth_8php_1aec4c923c7b3e3dfc9b2eac653af820ed" kind="variable"><name>$clientID</name></member>
+    <member refid="_o_auth_8php_1a3523acfb1ec2691723f13dd4ccd114c9" kind="variable"><name>$clientSecret</name></member>
+    <member refid="_o_auth_8php_1ae3a1cc92dd18e810d97a9f1286ee3e68" kind="variable"><name>$redirectUri</name></member>
+    <member refid="_o_auth_8php_1a934c4a71069a9e3bf15bcb8206884031" kind="variable"><name>$provider</name></member>
+    <member refid="_o_auth_8php_1a8669ddd1c93cc285e315735bfbb78b54" kind="variable"><name>$user</name></member>
+  </compound>
+  <compound refid="privacy_8php" kind="file"><name>privacy.php</name>
+  </compound>
+  <compound refid="process__registration_8php" kind="file"><name>process_registration.php</name>
+    <member refid="process__registration_8php_1ac0b24bfb11a6ceb4ae3b893c3c945283" kind="variable"><name>$recaptcha_secret</name></member>
+    <member refid="process__registration_8php_1a5978e9ef2d8054a1c11bb8066188fedf" kind="variable"><name>$recaptcha_response</name></member>
+    <member refid="process__registration_8php_1a43012e8af1a3d7baf6e48664627e3f98" kind="variable"><name>$recaptcha_url</name></member>
+    <member refid="process__registration_8php_1ac2a0ba9a055a66b1b8982b0c07a6ad5a" kind="variable"><name>$recaptcha_data</name></member>
+    <member refid="process__registration_8php_1ac40a5e91708031940a7cc3495707f709" kind="variable"><name>$recaptcha_options</name></member>
+    <member refid="process__registration_8php_1a9790cde5bfa3309274ba7c12372266a4" kind="variable"><name>$recaptcha_context</name></member>
+    <member refid="process__registration_8php_1a61b449f10d715a135e9d073547de13e8" kind="variable"><name>$recaptcha_result</name></member>
+    <member refid="process__registration_8php_1aabcf6016069bde434a681fa0034da1b1" kind="variable"><name>$recaptcha_response_data</name></member>
+  </compound>
+  <compound refid="query_8php" kind="file"><name>query.php</name>
+  </compound>
+  <compound refid="recoverypass_8php" kind="file"><name>recoverypass.php</name>
+    <member refid="recoverypass_8php_1ad79b54e31bd1050001133c4d70f850fe" kind="variable"><name>$servername</name></member>
+    <member refid="recoverypass_8php_1a0eb82aa5f81cf845de4b36cd653c42cf" kind="variable"><name>$username</name></member>
+    <member refid="recoverypass_8php_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="recoverypass_8php_1ac5111a571fffa2499732833bb7f0d8c1" kind="variable"><name>$dbname</name></member>
+    <member refid="recoverypass_8php_1aa8a5a87b9c1a6a0819b88447cbe41877" kind="variable"><name>$conn</name></member>
+    <member refid="recoverypass_8php_1a84b4e1a56bafcffe438e93857cc2f104" kind="function"><name>sendPasswordResetEmail</name></member>
+  </compound>
+  <compound refid="reginterface_8php" kind="file"><name>reginterface.php</name>
+    <member refid="reginterface_8php_1ad79b54e31bd1050001133c4d70f850fe" kind="variable"><name>$servername</name></member>
+    <member refid="reginterface_8php_1a0eb82aa5f81cf845de4b36cd653c42cf" kind="variable"><name>$username</name></member>
+    <member refid="reginterface_8php_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="reginterface_8php_1ac5111a571fffa2499732833bb7f0d8c1" kind="variable"><name>$dbname</name></member>
+    <member refid="reginterface_8php_1aa8a5a87b9c1a6a0819b88447cbe41877" kind="variable"><name>$conn</name></member>
+  </compound>
+  <compound refid="terms_8php" kind="file"><name>terms.php</name>
+  </compound>
+</doxygenindex>

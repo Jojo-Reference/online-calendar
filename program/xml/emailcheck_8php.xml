@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="emailcheck_8php" kind="file" language="PHP">
+    <compoundname>emailcheck.php</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="emailcheck_8php_1ad79b54e31bd1050001133c4d70f850fe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$servername</definition>
+        <argsstring></argsstring>
+        <name>$servername</name>
+        <initializer>= &quot;localhost&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Скрипт для проверки уникальности email в базе данных.</para>
+<para>Этот скрипт содержит функцию для проверки уникальности email в базе данных. Также включает подключение к базе данных для выполнения запросов. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emailcheck.php" line="10" column="1" bodyfile="emailcheck.php" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="emailcheck_8php_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$username</definition>
+        <argsstring></argsstring>
+        <name>$username</name>
+        <initializer>= &quot;username&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emailcheck.php" line="11" column="1" bodyfile="emailcheck.php" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="emailcheck_8php_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$password</definition>
+        <argsstring></argsstring>
+        <name>$password</name>
+        <initializer>= &quot;password&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emailcheck.php" line="12" column="1" bodyfile="emailcheck.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="emailcheck_8php_1ac5111a571fffa2499732833bb7f0d8c1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$dbname</definition>
+        <argsstring></argsstring>
+        <name>$dbname</name>
+        <initializer>= &quot;calendar_db&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emailcheck.php" line="13" column="1" bodyfile="emailcheck.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="emailcheck_8php_1aa8a5a87b9c1a6a0819b88447cbe41877" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$conn</definition>
+        <argsstring></argsstring>
+        <name>$conn</name>
+        <initializer>= new mysqli($servername, $username, $password, $dbname)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emailcheck.php" line="14" column="1" bodyfile="emailcheck.php" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="emailcheck_8php_1ad634f418b20382e2802f80532d76d3cd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$email</definition>
+        <argsstring></argsstring>
+        <name>$email</name>
+        <initializer>= &quot;example@example.com&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emailcheck.php" line="39" column="1" bodyfile="emailcheck.php" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="emailcheck_8php_1af8c3245423806c39aca88b23c0b44c90" prot="public" static="no" mutable="no">
+        <type>if(isEmailUnique($email, $conn))</type>
+        <definition>if (isEmailUnique( $email, $conn)) else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+    echo &quot;Email уже используется&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emailcheck.php" line="42" column="2" bodyfile="emailcheck.php" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="emailcheck_8php_1ab0c29962f39a82f96c7de98c3c677400" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>if( $conn-&gt;connect_error)</type>
+        <definition>if($conn-&gt;connect_error) isEmailUnique</definition>
+        <argsstring>($email, $conn)</argsstring>
+        <name>isEmailUnique</name>
+        <param>
+          <declname>$email</declname>
+        </param>
+        <param>
+          <declname>$conn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Функция для проверки уникальности email в базе данных.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Email для проверки </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>mysqli</parametertype>
+<parametername>$conn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Объект подключения к базе данных </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool Возвращает true, если email уникален, и false, если email уже используется </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emailcheck.php" line="27" column="10" bodyfile="emailcheck.php" bodystart="27" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Подключение<sp/>к<sp/>базе<sp/>данных<sp/>(замените<sp/>данными<sp/>вашей<sp/>БД)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">$servername<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;localhost&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">$username<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;username&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">$password<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;password&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">$dbname<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;calendar_db&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">$conn<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>mysqli($servername,<sp/>$username,<sp/>$password,<sp/>$dbname);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($conn-&gt;connect_error)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>die(</highlight><highlight class="stringliteral">&quot;Connection<sp/>failed:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$conn-&gt;connect_error);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>isEmailUnique($email,<sp/>$conn)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>*<sp/>FROM<sp/>users<sp/>WHERE<sp/>email<sp/>=<sp/>&apos;$email&apos;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>$result<sp/>=<sp/>$conn-&gt;query($sql);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($result-&gt;num_rows<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Email<sp/>уже<sp/>используется</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Email<sp/>уникален</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Пример<sp/>использования<sp/>функции<sp/>для<sp/>проверки<sp/>уникальности<sp/>email</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">$email<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;example@example.com&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isEmailUnique($email,<sp/>$conn))<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;Email<sp/>уникален&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;Email<sp/>уже<sp/>используется&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">?&gt;</highlight></codeline>
+    </programlisting>
+    <location file="emailcheck.php"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentation>
+    <script>
+        <description>
+            Скрипт авторизации пользователя.
+            Этот скрипт проверяет введенные пользователем данные для входа в систему.
+            В случае успешной авторизации пользователь перенаправляется на страницу календаря.
+            При неудачной попытке авторизации выводится сообщение об ошибке.
+        </description>
+        <session_initialization>
+            Инициализация сессии с помощью функции session_start().
+        </session_initialization>
+        <form_processing>
+            <method_check>
+                Проверка метода запроса и обработка данных формы.
+            </method_check>
+            <credentials>
+                <username>admin</username>
+                <password>password</password>
+            </credentials>
+            <input_data>
+                Получение данных из формы.
+            </input_data>
+            <credentials_check>
+                Проверка учетных данных и установка флага сессии.
+            </credentials_check>
+        </form_processing>
+    </script>
+    <html_form>
+        <title>Авторизация</title>
+        <style>
+            <body>
+                <padding>0</padding>
+                <background>#99c8f7</background>
+            </body>
+        </style>
+        <header>Авторизация</header>
+        <error_message>
+            <color>red</color>
+            <text>Неверное имя пользователя или пароль</text>
+        </error_message>
+        <form>
+            <method>post</method>
+            <action></action>
+            <input_fields>
+                <username>
+                    <label>Имя пользователя:</label>
+                    <type>text</type>
+                    <id>username</id>
+                    <name>username</name>
+                </username>
+                <password>
+                    <label>Пароль:</label>
+                    <type>password</type>
+                    <id>password</id>
+                    <name>password</name>
+                </password>
+            </input_fields>
+            <submit_button>Войти</submit_button>
+        </form>
+    </html_form>
+</documentation>

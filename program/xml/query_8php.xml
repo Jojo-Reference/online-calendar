@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="query_8php" kind="file" language="PHP">
+    <compoundname>query.php</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CREATE<sp/>INDEX<sp/>idx_username<sp/>ON<sp/>users<sp/>(username)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">$conn-&gt;query($sql);</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CREATE<sp/>INDEX<sp/>idx_email<sp/>ON<sp/>users<sp/>(email)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">$conn-&gt;query($sql);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">$username<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;example_user&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>*<sp/>FROM<sp/>users<sp/>WHERE<sp/>username<sp/>=<sp/>&apos;$username&apos;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">$result<sp/>=<sp/>$conn-&gt;query($sql);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">$email<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;example@example.com&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>*<sp/>FROM<sp/>users<sp/>WHERE<sp/>email<sp/>=<sp/>&apos;$email&apos;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">$result<sp/>=<sp/>$conn-&gt;query($sql)</highlight></codeline>
+    </programlisting>
+    <location file="query.php"/>
+  </compounddef>
+</doxygen>

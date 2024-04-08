@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE documentation SYSTEM "docbook.dtd">
+<documentation>
+    <script>
+        <description>
+            Скрипт обработки данных пользователя.
+            Этот скрипт обрабатывает введенные пользователем данные для входа в систему.
+            При успешной авторизации пользователь перенаправляется на страницу календаря.
+            При неудачной попытке авторизации выводится сообщение об ошибке.
+        </description>
+        <session_initialization>
+            Инициализация сессии с помощью функции session_start().
+        </session_initialization>
+        <function>
+            <name>login</name>
+            <description>
+                Функция для проверки учетных данных пользователя.
+            </description>
+            <parameters>
+                <parameter>
+                    <name>$username</name>
+                    <type>string</type>
+                    <description>Имя пользователя</description>
+                </parameter>
+                <parameter>
+                    <name>$password</name>
+                    <type>string</type>
+                    <description>Пароль пользователя</description>
+                </parameter>
+            </parameters>
+            <return>
+                <type>bool</type>
+                <description>Результат проверки учетных данных (true - успешно, false - неуспешно)</description>
+            </return>
+        </function>
+    </script>
+    <html_form>
+        <title>Авторизация</title>
+        <form>
+            <method>post</method>
+            <action></action>
+            <input_fields>
+                <field>
+                    <label>Имя пользователя:</label>
+                    <type>text</type>
+                    <id>username</id>
+                    <name>username</name>
+                </field>
+                <field>
+                    <label>Пароль:</label>
+                    <type>password</type>
+                    <id>password</id>
+                    <name>password</name>
+                </field>
+            </input_fields>
+            <submit_button>Войти</submit_button>
+        </form>
+    </html_form>
+</documentation>

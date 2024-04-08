@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="process__registration_8php" kind="file" language="PHP">
+    <compoundname>process_registration.php</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="process__registration_8php_1ac0b24bfb11a6ceb4ae3b893c3c945283" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$recaptcha_secret</definition>
+        <argsstring></argsstring>
+        <name>$recaptcha_secret</name>
+        <initializer>= &quot;YOUR_SECRET_KEY&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="process_registration.php" line="13" column="1" bodyfile="process_registration.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="process__registration_8php_1a5978e9ef2d8054a1c11bb8066188fedf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$recaptcha_response</definition>
+        <argsstring></argsstring>
+        <name>$recaptcha_response</name>
+        <initializer>= $_POST[&apos;g-recaptcha-response&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="process_registration.php" line="19" column="1" bodyfile="process_registration.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="process__registration_8php_1a43012e8af1a3d7baf6e48664627e3f98" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$recaptcha_url</definition>
+        <argsstring></argsstring>
+        <name>$recaptcha_url</name>
+        <initializer>= &apos;https://www.google.com/recaptcha/api/siteverify&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="process_registration.php" line="25" column="1" bodyfile="process_registration.php" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="process__registration_8php_1ac2a0ba9a055a66b1b8982b0c07a6ad5a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$recaptcha_data</definition>
+        <argsstring></argsstring>
+        <name>$recaptcha_data</name>
+        <initializer>= array(
+    &apos;secret&apos; =&gt; $recaptcha_secret,
+    &apos;response&apos; =&gt; $recaptcha_response
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="process_registration.php" line="31" column="1" bodyfile="process_registration.php" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="process__registration_8php_1ac40a5e91708031940a7cc3495707f709" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$recaptcha_options</definition>
+        <argsstring></argsstring>
+        <name>$recaptcha_options</name>
+        <initializer>= array(
+    &apos;http&apos; =&gt; array(
+        &apos;method&apos; =&gt; &apos;POST&apos;,
+        &apos;content&apos; =&gt; http_build_query($recaptcha_data)
+    )
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="process_registration.php" line="40" column="1" bodyfile="process_registration.php" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="process__registration_8php_1a9790cde5bfa3309274ba7c12372266a4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$recaptcha_context</definition>
+        <argsstring></argsstring>
+        <name>$recaptcha_context</name>
+        <initializer>= stream_context_create($recaptcha_options)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="process_registration.php" line="51" column="1" bodyfile="process_registration.php" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="process__registration_8php_1a61b449f10d715a135e9d073547de13e8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$recaptcha_result</definition>
+        <argsstring></argsstring>
+        <name>$recaptcha_result</name>
+        <initializer>= file_get_contents($recaptcha_url, false, $recaptcha_context)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="process_registration.php" line="58" column="1" bodyfile="process_registration.php" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="process__registration_8php_1aabcf6016069bde434a681fa0034da1b1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$recaptcha_response_data</definition>
+        <argsstring></argsstring>
+        <name>$recaptcha_response_data</name>
+        <initializer>= json_decode($recaptcha_result)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="process_registration.php" line="65" column="1" bodyfile="process_registration.php" bodystart="65" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">$recaptcha_secret<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;YOUR_SECRET_KEY&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">$recaptcha_response<sp/>=<sp/>$_POST[</highlight><highlight class="stringliteral">&apos;g-recaptcha-response&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">$recaptcha_url<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;https://www.google.com/recaptcha/api/siteverify&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">$recaptcha_data<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;secret&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$recaptcha_secret,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;response&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$recaptcha_response</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">$recaptcha_options<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;http&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;method&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;POST&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;content&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>http_build_query($recaptcha_data)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">$recaptcha_context<sp/>=<sp/>stream_context_create($recaptcha_options);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">$recaptcha_result<sp/>=<sp/>file_get_contents($recaptcha_url,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>$recaptcha_context);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">$recaptcha_response_data<sp/>=<sp/>json_decode($recaptcha_result);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$recaptcha_response_data-&gt;success)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>die(</highlight><highlight class="stringliteral">&quot;reCAPTCHA<sp/>verification<sp/>failed.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Далее<sp/>обработка<sp/>данных<sp/>формы<sp/>и<sp/>регистрация<sp/>пользователя</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">?&gt;</highlight></codeline>
+    </programlisting>
+    <location file="process_registration.php"/>
+  </compounddef>
+</doxygen>
